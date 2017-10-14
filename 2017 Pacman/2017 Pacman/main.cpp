@@ -3,6 +3,8 @@
 #include<Xinput.h>
 #include<stdio.h>
 #include"main.h"
+#include"settexture.h"
+#include"BackGround.h"
 
 #define TITLE TEXT ("pacman")
 #define WIDTH	640
@@ -109,6 +111,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInsta, LPSTR szStr, INT i
 		D3DCREATE_SOFTWARE_VERTEXPROCESSING,
 		&g_D3dPresentParameters, &g_pD3Device);
 
+	settexture();
+	Set();
 
 	DWORD SyncOld = timeGetTime();		//	システム時間を取得
 	DWORD SyncNow = timeGetTime();
@@ -137,6 +141,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInsta, LPSTR szStr, INT i
 
 				//描画の開始
 				g_pD3Device->BeginScene();
+
+				BGdraw();
 
 				//描画の終了
 				g_pD3Device->EndScene();
