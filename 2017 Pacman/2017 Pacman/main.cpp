@@ -5,6 +5,9 @@
 #include"main.h"
 #include"settexture.h"
 #include"BackGround.h"
+#include"Pacman.h"
+#include"Dinput.h"
+#include"Enemy.h"
 
 #define TITLE TEXT ("pacman")
 #define WIDTH	640
@@ -47,8 +50,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp)
 void FreeDx()
 {
 	for (int i = 0; i <= TEXMAX; i++)
-	{
-		SAFE_RELEASE(g_pTexture[i]);
+	{ 
 	}
 	SAFE_RELEASE(g_pD3Device);
 	SAFE_RELEASE(g_pDirect3D);
@@ -114,6 +116,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInsta, LPSTR szStr, INT i
 	settexture();
 	Set();
 
+	InitDinput();
+	InitDinputKey(hWnd);
+
 	DWORD SyncOld = timeGetTime();		//	システム時間を取得
 	DWORD SyncNow = timeGetTime();
 
@@ -143,6 +148,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInsta, LPSTR szStr, INT i
 				g_pD3Device->BeginScene();
 
 				BGdraw();
+				pacdraw();
+				Enemydraw();
+				Paccontrol();
 
 				//描画の終了
 				g_pD3Device->EndScene();

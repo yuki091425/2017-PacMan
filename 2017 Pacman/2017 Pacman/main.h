@@ -17,7 +17,15 @@ struct CUSTOMVERTEX
 enum TEXTURE
 {
 	BACKGROUND_TEX,
+	PACMAN_TEX,
+	PACMAN_EX_TEX,
+	ENEMY_1_TEX,
 	TEXMAX
+};
+
+struct CHARCTER_STATE
+{
+	float x, y, scale;
 };
 
 extern LPDIRECT3DTEXTURE9	  g_pTexture[TEXMAX];	//	‰æ‘œ‚Ìî•ñ‚ð“ü‚ê‚Ä‚¨‚­ˆ×‚Ì”z—ñ

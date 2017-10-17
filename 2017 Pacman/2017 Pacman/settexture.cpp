@@ -22,6 +22,55 @@ void Set()
 
 	D3DXCreateTextureFromFile(
 		g_pD3Device,
-		TEXT("pacman‰¼ŠG.png"),
+		TEXT("”wŒi‰¼ŠG.png"),
 		&g_pTexture[BACKGROUND_TEX]);
+
+	D3DXCreateTextureFromFileEx(
+		g_pD3Device,
+		TEXT("ƒpƒbƒNƒ}ƒ“3.png"),
+		D3DX_DEFAULT_NONPOW2,
+		D3DX_DEFAULT_NONPOW2,
+		D3DX_DEFAULT,
+		0,
+		D3DFMT_UNKNOWN,
+		D3DPOOL_MANAGED,
+		D3DX_FILTER_NONE,
+		D3DX_FILTER_NONE,
+		D3DCOLOR_ARGB(255, 0, 255, 0),
+		NULL,
+		NULL,
+		&g_pTexture[PACMAN_TEX]);
+
+	D3DXCreateTextureFromFileEx(
+		g_pD3Device,
+		TEXT("ƒpƒbƒNƒ}ƒ“Œû•Â‚¶2.png"),
+		D3DX_DEFAULT_NONPOW2,
+		D3DX_DEFAULT_NONPOW2,
+		D3DX_DEFAULT,
+		0,
+		D3DFMT_UNKNOWN,
+		D3DPOOL_MANAGED,
+		D3DX_FILTER_NONE,
+		D3DX_FILTER_NONE,
+		D3DCOLOR_ARGB(255, 0, 255, 0),
+		NULL,
+		NULL,
+		&g_pTexture[PACMAN_EX_TEX]);
+
+
+	D3DXCreateTextureFromFileEx(
+		g_pD3Device,
+		TEXT("Enemy1.png"),
+		D3DX_DEFAULT_NONPOW2,
+		D3DX_DEFAULT_NONPOW2,
+		D3DX_DEFAULT,
+		0,
+		D3DFMT_UNKNOWN,
+		D3DPOOL_MANAGED,
+		D3DX_FILTER_NONE,
+		D3DX_FILTER_NONE,
+		D3DCOLOR_ARGB(255, 0, 255, 0),
+		NULL,
+		NULL,
+		&g_pTexture[ENEMY_1_TEX]);
 }
