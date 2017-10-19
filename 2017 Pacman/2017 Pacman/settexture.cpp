@@ -27,7 +27,7 @@ void Set()
 
 	D3DXCreateTextureFromFileEx(
 		g_pD3Device,
-		TEXT("パックマン3.png"),
+		TEXT("左向きパックマン5.png"),
 		D3DX_DEFAULT_NONPOW2,
 		D3DX_DEFAULT_NONPOW2,
 		D3DX_DEFAULT,
@@ -39,11 +39,76 @@ void Set()
 		D3DCOLOR_ARGB(255, 0, 255, 0),
 		NULL,
 		NULL,
-		&g_pTexture[PACMAN_TEX]);
+		&g_pTexture[PACMANLEFT_TEX]);
 
 	D3DXCreateTextureFromFileEx(
 		g_pD3Device,
-		TEXT("パックマン口閉じ2.png"),
+		TEXT("右向きパックマン5.png"),
+		D3DX_DEFAULT_NONPOW2,
+		D3DX_DEFAULT_NONPOW2,
+		D3DX_DEFAULT,
+		0,
+		D3DFMT_UNKNOWN,
+		D3DPOOL_MANAGED,
+		D3DX_FILTER_NONE,
+		D3DX_FILTER_NONE,
+		D3DCOLOR_ARGB(255, 0, 255, 0),
+		NULL,
+		NULL,
+		&g_pTexture[PACMANRIGHT_TEX]);
+
+	D3DXCreateTextureFromFileEx(
+		g_pD3Device,
+		TEXT("上向きパックマン5.png"),
+		D3DX_DEFAULT_NONPOW2,
+		D3DX_DEFAULT_NONPOW2,
+		D3DX_DEFAULT,
+		0,
+		D3DFMT_UNKNOWN,
+		D3DPOOL_MANAGED,
+		D3DX_FILTER_NONE,
+		D3DX_FILTER_NONE,
+		D3DCOLOR_ARGB(255, 0, 255, 0),
+		NULL,
+		NULL,
+		&g_pTexture[PACMANUP_TEX]);
+
+	D3DXCreateTextureFromFileEx(
+		g_pD3Device,
+		TEXT("下向きパックマン5.png"),
+		D3DX_DEFAULT_NONPOW2,
+		D3DX_DEFAULT_NONPOW2,
+		D3DX_DEFAULT,
+		0,
+		D3DFMT_UNKNOWN,
+		D3DPOOL_MANAGED,
+		D3DX_FILTER_NONE,
+		D3DX_FILTER_NONE,
+		D3DCOLOR_ARGB(255, 0, 255, 0),
+		NULL,
+		NULL,
+		&g_pTexture[PACMANDOWN_TEX]);
+
+	/*使ってません*/
+	/*D3DXCreateTextureFromFileEx(
+		g_pD3Device,
+		TEXT("パックマン4.png"),
+		D3DX_DEFAULT_NONPOW2,
+		D3DX_DEFAULT_NONPOW2,
+		D3DX_DEFAULT,
+		0,
+		D3DFMT_UNKNOWN,
+		D3DPOOL_MANAGED,
+		D3DX_FILTER_NONE,
+		D3DX_FILTER_NONE,
+		D3DCOLOR_ARGB(255, 0, 255, 0),
+		NULL,
+		NULL,
+		&g_pTexture[PACMAN_EX2_TEX]);*/
+
+	D3DXCreateTextureFromFileEx(
+		g_pD3Device,
+		TEXT("パックマン口閉じ4.png"),
 		D3DX_DEFAULT_NONPOW2,
 		D3DX_DEFAULT_NONPOW2,
 		D3DX_DEFAULT,
